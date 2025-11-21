@@ -1,0 +1,76 @@
+
+/* Dark Minimal Cyber Theme */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background: #0d1117;
+  color: #8b949e;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2 { color: #58a6ff; }
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.2rem; margin-bottom: 2rem; text-align: center; }
+
+.nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 2rem 5%;
+  background: #161b22;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #30363d;
+}
+.nav__logo {
+  color: #58a6ff;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.nav__links a {
+  color: #8b949e;
+  text-decoration: none;
+  margin-left: 2rem;
+  transition: color 0.3s;
+}
+.nav__links a:hover { color: #58a6ff; }
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 5%;
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+}
+.typing {
+  overflow: hidden;
+  border-right: 3px solid #39ff14;
+  white-space: nowrap;
+  animation: typing 4s steps(30) infinite;
+}
+@keyframes typing {
+  0% { width: 0 }
+  50% { width: 100% }
+  100% { width: 0 }
+}
+.hero__subtitle {
+  font-size: 1.5rem;
+  color: #39ff14;
+  margin: 1rem 0;
+}
+.hero__badges img {
+  height: 100px;
+  margin-top: 2rem;
+  filter: drop-shadow(0 0 10px #58a6ff);
+}
+
+.section {
+  padding: 8rem 10%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
