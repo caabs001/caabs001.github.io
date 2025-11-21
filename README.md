@@ -1,1 +1,0 @@
-Christian Sesay | Cybersecurity Portfolio 
