@@ -1,76 +1,46 @@
-
-/* Dark Minimal Cyber Theme */
+/* Dark Minimal Cyber — Day 2 Final */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  font-family: 'JetBrains Mono', monospace;
-  background: #0d1117;
-  color: #8b949e;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
+body { font-family: 'JetBrains Mono', monospace; background: #0d1117; color: #8b949e; line-height: 1.6; overflow-x: hidden; }
 h1, h2 { color: #58a6ff; }
 h1 { font-size: 3.5rem; }
-h2 { font-size: 2.2rem; margin-bottom: 2rem; text-align: center; }
+h2 { font-size: 2.2rem; text-align: center; margin-bottom: 1.5rem; }
+.section-subtitle { text-align: center; color: #39ff14; margin-bottom: 3rem; font-size: 1.1rem; }
 
-.nav {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 2rem 5%;
-  background: #161b22;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid #30363d;
-}
-.nav__logo {
-  color: #58a6ff;
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-.nav__links a {
-  color: #8b949e;
-  text-decoration: none;
-  margin-left: 2rem;
-  transition: color 0.3s;
-}
+.nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; background: #161b22; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid #30363d; }
+.nav__logo { color: #58a6ff; font-weight: 700; font-size: 1.8rem; }
+.nav__links a { color: #8b949e; text-decoration: none; margin-left: 2rem; transition: color 0.3s; }
 .nav__links a:hover { color: #58a6ff; }
 
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 5%;
-  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
-}
-.typing {
-  overflow: hidden;
-  border-right: 3px solid #39ff14;
-  white-space: nowrap;
-  animation: typing 4s steps(30) infinite;
-}
-@keyframes typing {
-  0% { width: 0 }
-  50% { width: 100% }
-  100% { width: 0 }
-}
-.hero__subtitle {
-  font-size: 1.5rem;
-  color: #39ff14;
-  margin: 1rem 0;
-}
-.hero__badges img {
-  height: 100px;
-  margin-top: 2rem;
-  filter: drop-shadow(0 0 10px #58a6ff);
+.hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 5%; background: linear-gradient(135deg, #0d1117 0%, #161b22 100%); }
+.typing { overflow: hidden; border-right: 3px solid #39ff14; white-space: nowrap; animation: typing 3.5s steps(30) infinite, blink 0.7s infinite; }
+@keyframes typing { 0%, 100% { width: 0 } 50% { width: 100% } }
+@keyframes blink { 50% { border-color: transparent } }
+.hero__subtitle { font-size: 1.6rem; color: #39ff14; margin: 1rem 0; }
+.cert-badge { height: 130px; margin-top: 2rem; filter: drop-shadow(0 0 15px #58a6ff); transition: transform 0.3s; }
+.cert-badge:hover { transform: scale(1.08); }
+
+.section { padding: 7rem 5% 4rem; max-width: 1300px; margin: 0 auto; }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+.project-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; overflow: hidden; transition: all 0.4s; }
+.project-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(88, 166, 255, 0.2); border-color: #58a6ff; }
+.project-image-placeholder { height: 180px; background: linear-gradient(135deg, #58a6ff, #39ff14); display: flex; align-items: center; justify-content: center; font-size: 3rem; font-weight: bold; color: #0d1117; }
+.project-info { padding: 1.5rem; }
+.project-info h3 { color: #58a6ff; margin-bottom: 0.5rem; }
+.btn { display: inline-block; padding: 0.6rem 1.2rem; background: transparent; color: #39ff14; border: 1px solid #39ff14; border-radius: 6px; text-decoration: none; transition: all 0.3s; }
+.btn:hover { background: #39ff14; color: #0d1117; }
+.btn.secondary { color: #58a6ff; border-color: #58a6ff; }
+.btn.secondary:hover { background: #58a6ff; color: #0d1117; }
+
+.skills-grid { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem; }
+.skill-tag { background: #161b22; padding: 0.7rem 1.4rem; border: 1px solid #30363d; border-radius: 30px; transition: all 0.3s; }
+.skill-tag:hover { border-color: #58a6ff; color: #58a6ff; transform: translateY(-3px); }
+
+.contact-links { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap; }
+
+@media (max-width: 768px) {
+  .nav__links { display: none; } /* hamburger later if you want */
+  h1 { font-size: 2.8rem; }
+  .hero__subtitle { font-size: 1.3rem; }
 }
 
-.section {
-  padding: 8rem 10%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
