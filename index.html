@@ -22,12 +22,27 @@
       </ul>
     </nav>
 
+  <section id="hero">
   <div class="hero-content">
-  <h1 id="typing-name"></h1>
-  <p class="subtitle" style="font-size: 1.5rem; margin-top: 30px; opacity: 0.9;">
-    Still loading...
-  </p>
-</div>
+    <h1 id="typing-name"></h1>
+    <p class="subtitle" style="font-size: 1.4rem; margin-top: 20px; opacity: 0.9;">
+      Still loading....
+    </p>
+  </div>
+</section>
+
+<script>
+  const name = "Christian Sesay";
+  let i = 0;
+  function typeName() {
+    if (i < name.length) {
+      document.getElementById("typing-name").innerHTML += name.charAt(i);
+      i++;
+      setTimeout(typeName, 130);
+    }
+  }
+  typeName();
+</script>
   </header>
 
   <section id="about" class="section">
@@ -145,6 +160,7 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
 
 
 
